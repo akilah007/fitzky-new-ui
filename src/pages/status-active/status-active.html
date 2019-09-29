@@ -1,0 +1,68 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>Status : Active</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="status-bg">
+    <ion-card class="radius-card _title _blue">
+      <ion-row>
+        <ion-col>
+          <h1>Athlete Unleashed</h1>
+          <span class="_ratings">
+            <ion-icon name="star-outline" *ngFor="let x of [1,2,3,4,5]"></ion-icon>
+            <small>4.2 / 5.0</small>
+          </span>
+          <span class="_address">
+            No.20 B,1/1 , Lauries Place, R. A. De Mel Mawatha, Colombo 04
+          </span>
+        </ion-col>
+        <ion-col col-3 class="_location-icon">
+          <span class="_icon"><img src="/assets/imgs/location-icon.svg" /></span>
+          <small>Locate Class</small>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  <div padding>
+    <h4 class="new-sub-title">Membership Details</h4>
+    <ion-grid class="new-data-grid">
+      <ion-row>
+        <ion-col col-5>Membership</ion-col>
+        <ion-col col-7>: 8 Class</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>Starting Date</ion-col>
+        <ion-col col-7>: 01 September, 2019</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>Exp. Date</ion-col>
+        <ion-col col-7>: 01 October, 2019</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>Available Slots</ion-col>
+        <ion-col col-7>: 2 / 6</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>Method of Payment</ion-col>
+        <ion-col col-7>: Cash</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card class="rating-card">
+      <ion-row>
+        <ion-col class="_text">
+          <span>Rate this Class</span>
+          <a>Write a review</a>
+        </ion-col>
+        <ion-col col-7 class="rating-stars">
+          <ion-icon name="star-outline" *ngFor="let x of [1,2,3,4,5]"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer no-border class="new-action-footer">
+  <ion-row justify-content-between>
+  <button ion-button round><ion-icon name="call"></ion-icon> Contact Class</button>
+  <button ion-button round color="secondary">Book a New Slot</button>
+  </ion-row>
+</ion-footer>

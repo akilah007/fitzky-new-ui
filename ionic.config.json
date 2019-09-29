@@ -1,5 +1,7 @@
 {
   "name": "fitzkyapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

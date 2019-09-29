@@ -1,0 +1,65 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>Ratings & Reviews</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card class="radius-card _title _red">
+    <ion-row>
+      <ion-col>
+        <h1>Athlete Unleashed</h1>
+        <small class="_city">Boralesgamuwa</small>
+        <span class="_resources">
+          <strong>Resources :</strong>
+            Gym | Swimming Pool | Sauna Room | Badminton
+        </span>
+      </ion-col>
+      <ion-col col-3>
+        <span class="_rating-count">4.6</span>
+        <small class="_rating-stars">
+          <ion-icon name="star-outline" *ngFor="let x of [1,2,3,4,5]"></ion-icon>
+        </small>
+        <small class="_total-count">
+          <ion-icon name="contact"></ion-icon> 11
+        </small>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <div class="_rate-stripe">
+    <span>Rate this Gym</span>
+    <div class="_stars">
+      <ion-icon name="star-outline" *ngFor="let x of [1,2,3,4,5]"></ion-icon>
+    </div>
+  </div>
+  <div class="chips-wrapper">
+    <button ion-button outline round small color="dark">Good Atmosphere</button>
+    <button ion-button outline round small color="dark">Motivational</button>
+    <button ion-button outline round small color="dark">Best place in Town</button>
+    <button ion-button outline round small color="dark">Highly Recommended</button>
+  </div>
+  <ion-item color="clear">
+    <ion-input placeholder="Write a review"></ion-input>
+  </ion-item>
+  <ion-item no-lines>
+    <button item-end ion-button round color="secondary">Submit Review</button>
+  </ion-item>
+  <h4>Recent Reviews</h4>
+  <ion-card class="review-card">
+    <ion-card-header>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="/assets/imgs/logo.svg" />
+      </ion-avatar>
+      <div>
+        <span class="_name">Saroj Somrathne <small>Nugegoda</small></span>
+      </div>
+      <div item-end>
+        <span class="_rate">5.0 / 5.0</span>
+      </div>
+    </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

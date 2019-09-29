@@ -1,0 +1,118 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>My Memberships</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content [ngClass]="{'expired': activeTab === 'expired'}">
+<!--  <h1 class="h1" padding>My Memberships</h1>-->
+  <div class="new-fab-header-wrapper">
+    <div class="fab-title">
+      <ion-row align-items-center>
+        <ion-col col-7>
+          <span class="_n">Sudaraka Gunasena</span>
+          <small class="_info">
+            W : 65Kg | H : 177cm
+            <button class="_edit-button" ion-button icon-only clear small>
+              <ion-icon name="create"></ion-icon>
+            </button>
+          </small>
+        </ion-col>
+        <ion-col class="avatar-wrap">
+          <span class="item-avatar">A</span>
+          <button ion-button icon-only clear>
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <div class="item-tabs-header">
+        <div class="tab-label" (click)="activeTab = 'active'">Active / Inactive</div>
+        <div class="tab-label" (click)="activeTab = 'expired'">Expired</div>
+      </div>
+    </div>
+  </div>
+  <!-- Tab Content -->
+  <section [ngSwitch]="activeTab">
+    <div padding class="tab-content" *ngSwitchCase="'active'">
+      <ion-card class="radius-card _blue">
+        <ion-card-header>Athleashed Unleashed <small>Boralasgamuwa</small></ion-card-header>
+        <ion-row>
+          <ion-col col-3>
+            <small>Membership</small>
+            <span class="_l">8 Classes</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Starting Date</small>
+            <span class="_l">01 Oct</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Exp. Date</small>
+            <span class="_l">1 Nov</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Available Slots</small>
+            <span class="_l">2 / 6</span>
+          </ion-col>
+        </ion-row>
+        <footer class="card-footer">
+          <button ion-button small round>View My Reservations</button>
+          <button ion-button small round>Book a New Slot</button>
+        </footer>
+      </ion-card>
+      <ion-card class="radius-card _red">
+        <ion-card-header>Athleashed Unleashed <small>Boralasgamuwa</small></ion-card-header>
+        <ion-row>
+          <ion-col col-3>
+            <small>Membership</small>
+            <span class="_l">8 Classes</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Starting Date</small>
+            <span class="_l">01 Oct</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Exp. Date</small>
+            <span class="_l">1 Nov</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Available Slots</small>
+            <span class="_l">2 / 6</span>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+    <div padding class="tab-content expired" *ngSwitchCase="'expired'">
+      <ion-card class="radius-card _default" *ngFor="let x of [1,2,3]">
+        <ion-card-header>
+          <ion-row justify-content-between="">
+            <ion-col>
+              Athleashed Unleashed <small>Boralasgamuwa</small>
+            </ion-col>
+            <div>
+              <button ion-button color="secondary" small round>Renew</button>
+            </div>
+          </ion-row>
+        </ion-card-header>
+        <ion-row>
+          <ion-col col-3>
+            <small>Membership</small>
+            <span class="_l">8 Classes</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Starting Date</small>
+            <span class="_l">01 Oct</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Exp. Date</small>
+            <span class="_l">1 Nov</span>
+          </ion-col>
+          <ion-col col-3>
+            <small>Available Slots</small>
+            <span class="_l">2 / 6</span>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+  </section>
+</ion-content>
